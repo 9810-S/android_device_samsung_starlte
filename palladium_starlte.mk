@@ -23,13 +23,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, device/samsung/starlte/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common AOSP stuff.
-$(call inherit-product, vendor/aosp/config/common.mk)
+# Inherit some common Palladium-OS stuff.
+$(call inherit-product, vendor/palladium/config/common_full_phone.mk)
 TARGET_INCLUDE_PIXEL_CHARGER := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := starlte
-PRODUCT_NAME := aosp_starlte
+PRODUCT_NAME := palladium_starlte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G960F
 PRODUCT_MANUFACTURER := samsung
@@ -45,3 +45,12 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.PDA=G960FXXUCFTK1 \
     ro.build.fingerprint=samsung/starltexx/starlte:10/QP1A.190711.020/G960FXXUCFTK1:user/release-keys
+
+# Palladium Specific props
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.palladiumdevice.maintainer=Dylan \
+    ro.palladiumdevice.battery=3500mAh \
+    ro.palladiumdevice.camera=12MP  \
+    ro.palladiumdevice.cpu=universal9810 \
+    ro.palladiumdevice.display=5.8 \
+    ro.palladiumdevice.displaytype=QHD+
