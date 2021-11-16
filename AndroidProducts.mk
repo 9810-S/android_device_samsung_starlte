@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_starlte.mk
+    $(LOCAL_DIR)/starlte.mk
 
 COMMON_LUNCH_CHOICES := \
-     aosp_starlte-userdebug \
-     aosp_starlte-eng \
-     aosp_starlte-user
+     starlte-userdebug \
+     starlte-eng \
+     starlte-user
